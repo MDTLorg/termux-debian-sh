@@ -117,7 +117,7 @@ termux-debian-sh/
 👨‍💻 Author
 
 <p align="center">
-<strong>MehmetOS Team</strong>
+<strong>MDTLorg Team</strong>
 </p>
 ---
 
