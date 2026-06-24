@@ -1,142 +1,196 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Termux Debian XFCE Startup Script</title>
+</head>
+<body>
 
+    <header align="center">
+        <h1>📦 Termux Debian XFCE Startup Script</h1>
+        <p>
+            <span style="background:green;color:white;padding:4px 10px;">Platform-Android</span>
+            <span style="background:blue;color:white;padding:4px 10px;">Environment-Termux-X11</span>
+            <span style="background:orange;color:white;padding:4px 10px;">Type-Automation</span>
+        </p>
+        <p>A lightweight automation script that launches a full Debian desktop environment on Android using <b>Termux + Termux-X11</b>.</p>
+    </header>
 
-<h1 align="center"> 📦 Termux Debian XFCE Startup Script </h1>
+    <hr />
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Platform-Android-green?style=for-the-badge"/>
-  <img src="https://img.shields.io/badge/Environment-Termux--X11-blue?style=for-the-badge"/>
-  <img src="https://img.shields.io/badge/Type-Automation-orange?style=for-the-badge"/>
-</p>
+    <section>
+        <h2>📸 Preview</h2>
+        <p align="center">
+            <img src="https://via.placeholder.com/800x400.png?text=Termux+Debian+XFCE+Preview" alt="Preview" width="80%" />
+        </p>
+    </section>
 
-<p align="center">
-A lightweight automation script that launches a full Debian desktop environment on Android using <b>Termux + Termux-X11</b>.
-</p>
+    <hr />
 
----
+    <section>
+        <h2>🚀 Features</h2>
+        <ul>
+            <li>⚡ Automatic Termux-X11 startup</li>
+            <li>🐧 Debian proot-distro integration</li>
+            <li>🖥️ Lightweight desktop environment (Enlightenment)</li>
+            <li>📱 Android optimized</li>
+            <li>🔓 No root required</li>
+            <li>🧠 Simple one-command execution</li>
+        </ul>
+    </section>
 
-## 📸 Preview
+    <hr />
 
-<p align="center">
-  <img src="https://via.placeholder.com/800x400.png?text=Termux+Debian+XFCE+Preview" />
-</p>
+    <section>
+        <h2>📥 Installation</h2>
 
----
-
-## 🚀 Features
-
-<ul>
-  <li>⚡ Automatic Termux-X11 startup</li>
-  <li>🐧 Debian proot-distro integration</li>
-  <li🖥️ Lightweight desktop environment (Enlightenment)</li>
-  <li>📱 Android optimized</li>
-  <li>🔓 No root required</li>
-  <li>🧠 Simple one-command execution</li>
-</ul>
-
----
-
-<p align="center">## 📥 Installation
-
-### 1. Clone repository
-
-```bash
+        <h3>1. Clone repository</h3>
+        <pre>
 git clone git@github.com:MehmetOSTeam/termux-debian-sh.git
 cd termux-debian-sh
+        </pre>
 
-
----
-
-2. Make script executable
-
+        <h3>2. Make script executable</h3>
+        <pre>
 chmod +x debian-xfce.sh
+        </pre>
 
+        <h3>⬇️ Doğrudan İndirme</h3>
+        <p>
+            <a href="https://github.com/MehmetOSTeam/termux-debian-sh/archive/refs/heads/main.zip">
+                📦 ZIP olarak indir (main branch)
+            </a>
+            <br />
+            <a href="https://github.com/MehmetOSTeam/termux-debian-sh.git">
+                🔗 Git ile klonla
+            </a>
+            <br />
+            <a href="https://github.com/MehmetOSTeam/termux-debian-sh">
+                🌐 GitHub repo sayfası
+            </a>
+        </p>
+    </section>
 
----
+    <hr />
 
-▶️ Usage
-
-Run the desktop environment with one command:
-
+    <section>
+        <h2>▶️ Usage</h2>
+        <p>Run the desktop environment with one command:</p>
+        <pre>
 ./debian-xfce.sh
+        </pre>
+    </section>
 
+    <hr />
 
----
-
-⚙️ Requirements
-
-<p>Install required packages in Termux:</p>pkg update && pkg upgrade -y
+    <section>
+        <h2>⚙️ Requirements</h2>
+        <p>Install required packages in Termux:</p>
+        <pre>
+pkg update &amp;&amp; pkg upgrade -y
 pkg install x11-repo -y
 pkg install termux-x11-nightly -y
 pkg install proot-distro -y
+        </pre>
+        <p>Install Debian rootfs:</p>
+        <pre>
+proot-distro install debian
+        </pre>
+    </section>
 
-<p>Install Debian rootfs:</p>proot-distro install debian
+    <hr />
 
+    <section>
+        <h2>🧠 How It Works</h2>
+        <ol>
+            <li>Terminates existing Termux-X11 sessions</li>
+            <li>Starts X11 display server</li>
+            <li>Configures DISPLAY environment variable</li>
+            <li>Launches Debian using proot-distro</li>
+            <li>Starts Enlightenment desktop environment</li>
+        </ol>
+    </section>
 
----
+    <hr />
 
-🧠 How It Works
+    <section>
+        <h2>⚠️ Notes</h2>
+        <ul>
+            <li>No root access required</li>
+            <li>Performance depends on device hardware</li>
+            <li>First launch may take longer than usual</li>
+            <li>Ensure Termux-X11 is properly installed</li>
+        </ul>
+    </section>
 
-<ol>
-  <li>Terminates existing Termux-X11 sessions</li>
-  <li>Starts X11 display server</li>
-  <li>Configures DISPLAY environment variable</li>
-  <li>Launches Debian using proot-distro</li>
-  <li>Starts Enlightenment desktop environment</li>
-</ol>
----
+    <hr />
 
-⚠️ Notes
+    <section>
+        <h2>📱 Compatibility</h2>
+        <ul>
+            <li>Android 8 or higher</li>
+            <li>Termux (F-Droid version recommended)</li>
+            <li>Termux-X11</li>
+            <li>proot-distro</li>
+        </ul>
+    </section>
 
-<ul>
-  <li>No root access required</li>
-  <li>Performance depends on device hardware</li>
-  <li>First launch may take longer than usual</li>
-  <li>Ensure Termux-X11 is properly installed</li>
-</ul>
----
+    <hr />
 
-📱 Compatibility
-
-<ul>
-  <li>Android 8 or higher</li>
-  <li>Termux (F-Droid version recommended)</li>
-  <li>Termux-X11</li>
-  <li>proot-distro</li>
-</ul>
----
-
-📂 Project Structure
-
+    <section>
+        <h2>📂 Project Structure</h2>
+        <pre>
 termux-debian-sh/
 │
 ├── debian-xfce.sh
 └── README.md
+        </pre>
+    </section>
 
+    <hr />
 
----
+    <section>
+        <h2>👨‍💻 Author</h2>
+        <p align="center"><strong>MehmetOS Team</strong></p>
+    </section>
 
-👨‍💻 Author
+    <hr />
 
-<p align="center">
-<strong>MehmetOS Team</strong>
-</p>
----
+    <section>
+        <h2>📄 License</h2>
+        <p>MIT License</p>
+        <p>
+            Permission is hereby granted, free of charge, to any person obtaining a copy
+            of this software and associated documentation files...
+        </p>
+    </section>
 
-📄 License
+    <hr />
 
-MIT License
+    <footer align="center">
+        <p>
+            ⭐ If you like this project, consider giving it a ⭐ on GitHub.
+        </p>
+        <p>Made with ❤️ for Termux users</p>
+        <p>
+            <small>
+                <a href="https://github.com/MehmetOSTeam/termux-debian-sh/archive/refs/heads/main.zip">
+                    📥 download (ZIP)
+                </a>
+                &nbsp;|&nbsp;
+                <a href="https://github.com/MehmetOSTeam/termux-debian-sh.git">
+                    🌀 Git clome
+                </a>
+                &nbsp;|&nbsp;
+                <a href="https://github.com/MehmetOSTeam/termux-debian-sh">
+                    🌐 GitHub adress
+                  Download(.sh)
+                  <a href="debian-xfce.sh">
+                </a>
+            </small>
+        </p>
+    </footer>
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files...
-
-
----
-
-⭐ Support
-
-If you like this project, consider giving it a ⭐ on GitHub.
-
-<p align="center">Made with ❤️ for Termux users</p>
-```
----
-</p>
+</body>
+</html>
